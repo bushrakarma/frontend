@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0px;
+}
+.swiper-wrapper {
+  /* height: 100vh; */
+  display: flex;
+  align-items: flex-end;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  width: 75%;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.card-mid::before {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  background-image: url("./../images/COVID\ vaccine.jpg");
+  background-size: cover;
+}
+.card-bg3 {
+  background-image: url("./../images/COVID\ vaccine.jpg");
+  background-size: cover;
+}
+.card-opacity {
+  opacity: 0.3;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 180px 20px 12px;
+  position: relative;
+  z-index: 100;
+}
+.card .image {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+.card .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.card .date {
+  color: #ccc;
+  align-self: flex-start;
+  font-size: 12px;
+}
+.card .btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.card .btn button {
+  padding: 10px;
+  border-radius: 50%;
+  border: #004a99 0px;
+  background-color: #004a99;
+  color: #fff;
+  font-size: 13px;
+}
+
+.swiper-pagination {
+  margin: -15px 0px;
+}
+.swiper-pagination-bullet {
+  height: 5px;
+  width: 175px;
+  border-radius: 25px;
+  background-color: linear-gradient(90deg, #004a99 50%, #7b7b7ba1 50%);
+}
+
+@media only screen and (max-width: 600px) {
+  .card-content .account {
+    align-self: flex-start;
+  }
+  .swiper-pagination-bullet {
+    width: 50px;
+  }
+  .card :nth-child(4) {
+    order: 2;
+  }
+  .card .btn button {
+    margin-top: -50px;
+  }
+}
